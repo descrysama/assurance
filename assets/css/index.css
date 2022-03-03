@@ -20,7 +20,7 @@ form {
 
 form input[type=text], form input[type=password] {
     margin: 10px;
-    min-height: 30px;
+    height: 35px;
     width: 300px;
     border: 2px rgb(226, 226, 226) solid;
     border-radius: 5px;
@@ -54,7 +54,7 @@ form input[type=submit]:hover {
 
 form select {
     margin: 10px;
-    min-height: 30px;
+    height: 35px;
     width: 300px;
     border: 2px rgb(226, 226, 226) solid;
     border-radius: 5px;
@@ -88,4 +88,6 @@ img {
 #first-log {
     text-align: center;
     width: 700px;
+    color: red;
+    font-weight: 700;
 }
