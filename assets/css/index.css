@@ -1,5 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 .content {
@@ -33,7 +34,7 @@ form input[type=text]:focus, form input[type=password]:focus {
     
 }
 
-form input[type=submit] {
+form input[type=submit], button {
     width: 300px;
     border: none;
     border-radius: 10px;
@@ -44,11 +45,11 @@ form input[type=submit] {
     margin: 10px;
 }
 
-form input[type=submit]:focus {
+form input[type=submit]:focus , button:focus {
     background-color: #d80f0f;
 }
 
-form input[type=submit]:hover {
+form input[type=submit]:hover , button:hover {
     cursor: pointer;
 }
 
@@ -72,17 +73,6 @@ img {
     width: 220px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* id en vrac */
 
 #first-log {
@@ -91,3 +81,103 @@ img {
     color: red;
     font-weight: 700;
 }
+
+
+
+/* NAVBAR */
+
+.nav {
+    height: 70px;
+    width: 100%;
+    background-color: #ECECEC;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .nav > img {
+      left: 0;
+      width: 100px;
+      position: absolute;
+  }
+  
+  .nav > .nav-header {
+    display: flex;
+    justify-content: left;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(199, 199, 199, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid rgb(29, 29, 29);
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: rgb(218, 218, 218);
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
